@@ -14,6 +14,8 @@ The sample app projects compile for and run successfully on each of Android, iOS
 
 You can use either Visual Studio 2017 (PC) v15.2+ or Visual Studio 2017 for Mac v7.0+ to open the solution and compile the apps; of course, the UWP project only compiles in the PC edition.
 
+I posted about this [at the Xamarin *Cross Platform with Xamarin* forum](https://forums.xamarin.com/discussion/95916/works-xamarin-forms-net-standard-entity-framework-core-for-sqlite-on-ios-android-uwp) and welcome comments there.
+
 Regards,
 
 Chris W. Rea  
