@@ -1,7 +1,6 @@
 
-
-Xamarin.Forms Todo Sample &mdash; .NET Stanadard &amp; EF Core Edition
-======================================================================
+Xamarin.Forms Todo Sample: .NET Standard &amp; EF Core Ed.
+==========================================================
 
 License
 -------
@@ -27,7 +26,7 @@ Description
 
 This is an adapted version of the [Xamarin.Forms Todo sample](https://developer.xamarin.com/samples/xamarin-forms/Todo/) ([repository](https://github.com/xamarin/xamarin-forms-samples/tree/master/Todo)), with the following key changes:
 
-1. Instead of using SQLite.Net PCL ORM for accessing SQLite, this version uses [Entity Framework Core](https://docs.microsoft.com/en-us/ef/core/) ([repository](https://github.com/aspnet/EntityFramework)), as EF Core [now works with iOS](https://github.com/aspnet/EntityFramework/issues/7158). Jon Douglas' post and sample [Building Android Apps with Entity Framework](https://blog.xamarin.com/building-android-apps-with-entity-framework/) informed on this.
+1. Instead of using the SQLite.Net PCL ORM for accessing SQLite, this version uses [Entity Framework Core](https://docs.microsoft.com/en-us/ef/core/) ([repository](https://github.com/aspnet/EntityFramework)), since EF Core [recently started working on Xamarin.iOS](https://github.com/aspnet/EntityFramework/issues/7158). Jon Douglas' post and sample [Building Android Apps with Entity Framework](https://blog.xamarin.com/building-android-apps-with-entity-framework/) informed on this.
 
 2. Instead of a Portable Class Library (PCL), app shared code is contained in a .NET Standard 1.4 library project. Oren Novotny's post on [Using Xamarin Forms with .NET Standard &mdash; VS 2017 Edition](https://oren.codes/2017/04/23/using-xamarin-forms-with-net-standard-vs-2017-edition/) informed on this.
 
@@ -39,7 +38,7 @@ You can use either Visual Studio 2017 (PC) v15.2+ or Visual Studio 2017 for Mac 
 
 Regards,
 
-Chris W. Rea
+Chris W. Rea  
 @cwrea
 
 
