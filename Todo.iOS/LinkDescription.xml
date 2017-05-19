@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<linker>
+  <!--
+  
+        LinkDescription.xml. File added to iOS project by @cwrea for adaptation to EF Core.
+        
+        Prevents runtime errors when reflection is used for certain types that are not otherwise referenced
+        directly in the project, and that would be removed by the Xamarin linker.
+        
+        These kinds of runtime errors do occur in particular when using Entity Framework Core on iOS. EF Core's
+        query parser does reference certain .NET methods _only_ via reflection, and it is those reflection-only
+        instances that we need to guard against by ensuring the linker includes them. For the curious, search
+        for mentions of "GetRuntimeMethod" at https://github.com/aspnet/EntityFramework. Use of EF Core more
+        advanced than this sample may require additional types/methods added to those below.
+        
+        Include the following in the project build settings under "Additional mtouch arguments":
+          [hyphen][hyphen]xml=${ProjectDir}/LinkDescription.xml
+          
+        There is supposed to be a "LinkDescription" build action for this linker config file so the step above
+        shouldn't be necessary, but at time of writing Visual Studio 2017 for PC doesn't show that build action
+        in iOS projects, even though it is an option within iOS projects on Visual Studio 2017 for Mac.
+        
+  -->
+  <assembly fullname="mscorlib">
+    <type fullname="System.String">
+      <method name="Compare"></method>
+      <method name="CompareTo"></method>
+      <method name="ToUpper"></method>
+      <method name="ToLower"></method>
+    </type>
+  </assembly>
+  <assembly fullname="System.Core">
+    <type fullname="System.Linq.Expressions.Expression`1"></type>
+    <type fullname="System.Linq.Queryable"></type>
+  </assembly>
+</linker>
