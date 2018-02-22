@@ -1,8 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard1.4</TargetFramework>
-    <PackageTargetFallback>portable-win+net45+wp8+win81+wpa8</PackageTargetFallback>
+    <TargetFramework>netstandard2.0</TargetFramework>
     <RootNamespace>Todo</RootNamespace>
     <Copyright>craigdunn</Copyright>
     <PackageId>QuickTodo</PackageId>
@@ -10,21 +9,14 @@
     <Product />
     <Description></Description>
     <Authors />
-    <PackageReleaseNotes>19-May-2017: This is an adaptation of Xamarin's original Todo PCL sample from https://developer.xamarin.com/samples/xamarin-forms/Todo/. This version is built on .NET Standard 1.4 and uses Entity Framework Core to manage the SQLite data instead of sqlite-net-pcl. This builds and runs on Android, iOS, and UWP devices. Adaptation work by Chris W. Rea (twitter: @cwrea).</PackageReleaseNotes>
+    <PackageReleaseNotes>22-Feb-2018: This is an adaptation of Xamarin's original Todo PCL sample from https://developer.xamarin.com/samples/xamarin-forms/Todo/. This version is built on .NET Standard 2.0 and uses Entity Framework Core 1.1.5 to manage the SQLite data instead of sqlite-net-pcl. This builds and runs on Android, iOS, and UWP devices. Adaptation work by Chris W. Rea (twitter: @cwrea).</PackageReleaseNotes>
+    <Version>1.0.1</Version>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="1.1.2" />
-    <PackageReference Include="Microsoft.NETCore.Portable.Compatibility" Version="1.0.1" />
-    <PackageReference Include="Xamarin.Forms" Version="2.3.4.247" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="1.1.5" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="1.1.5" />
+    <PackageReference Include="Xamarin.Forms" Version="2.5.0.280555" />
   </ItemGroup>
-
-  <ItemGroup>
-    <!-- https://bugzilla.xamarin.com/show_bug.cgi?id=55591 -->
-    <None Remove="**\*.xaml" />
-
-    <Compile Update="**\*.xaml.cs" DependentUpon="%(Filename)" />
-    <EmbeddedResource Include="**\*.xaml" SubType="Designer" Generator="MSBuild:UpdateDesignTimeXaml" />
-  </ItemGroup>
-  
+ 
 </Project>
