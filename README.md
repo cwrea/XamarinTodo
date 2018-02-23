@@ -4,7 +4,7 @@ Xamarin.Forms Todo Sample: .NET Standard &amp; EF Core Ed.
   
 This is an adapted version of the [Xamarin.Forms Todo sample](https://developer.xamarin.com/samples/xamarin-forms/Todo/) ([repository](https://github.com/xamarin/xamarin-forms-samples/tree/master/Todo)), with the following key changes:
 
-1. Instead of using the SQLite.Net PCL ORM for accessing SQLite, this version uses [Entity Framework Core](https://docs.microsoft.com/en-us/ef/core/) ([repository](https://github.com/aspnet/EntityFramework)), since EF Core [started working on Xamarin.iOS](https://github.com/aspnet/EntityFramework/issues/7158). Jon Douglas' post and sample [Building Android Apps with Entity Framework](https://blog.xamarin.com/building-android-apps-with-entity-framework/) informed on this. At the moment, the sample is using EF Core v1.1.5, the latest v1.x at time of writing. While EF Core v2.x is now available, getting this sample working 100% with EF Core v2.x remains a challenge.
+1. Instead of using the SQLite.Net PCL ORM for accessing SQLite, this version uses [Entity Framework Core](https://docs.microsoft.com/en-us/ef/core/) ([repository](https://github.com/aspnet/EntityFramework)), since EF Core [started working on Xamarin.iOS](https://github.com/aspnet/EntityFramework/issues/7158). Jon Douglas' post and sample [Building Android Apps with Entity Framework](https://blog.xamarin.com/building-android-apps-with-entity-framework/) informed on this. The sample originally started on EF Core v1.x and is now using EF Core v2.0.1.
 
 2. Instead of a Portable Class Library (PCL), app shared code is contained in a .NET Standard 2.0 library project, which is now a supported project template in Visual Studio 2017 as of v15.5.
 
