@@ -11,11 +11,21 @@ namespace Todo
 		public TodoListPageCS()
 		{
 			Title = "Todo";
-
+			string toolbarIcon;
+			switch (Device.RuntimePlatform)
+			{
+				case Device.Android:
+				case Device.UWP:
+					toolbarIcon = "plus.png";
+					break;
+				default:
+					toolbarIcon = null;
+					break;
+			}
 			var toolbarItem = new ToolbarItem
 			{
 				Text = "+",
-				Icon = Device.OnPlatform(null, "plus.png", "plus.png")
+				Icon = toolbarIcon
 			};
 			toolbarItem.Clicked += async (sender, e) =>
 			{
